@@ -22,10 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Change directory
+        run: cd shartsite
+
       - name: Vite Github Pages Deployer
         uses: skywarth/vite-github-pages-deployer@v1.3.0
         with:
           package_manager: yarn # optional, default is npm
-          # Desired name for the Deployment environment. It is also the exposed artifact name which contains the build output (dist).
-          working-directory: ./home/runner/shartsite
-          
