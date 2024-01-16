@@ -32,3 +32,4 @@ jobs:
         uses: skywarth/vite-github-pages-deployer@v1.3.0
         with:
           package_manager: yarn # optional, default is npm
+          public_base_path: /
