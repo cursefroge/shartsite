@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Vite Github Pages Deployer
         uses: skywarth/vite-github-pages-deployer@v1.3.0
-        #with:
-          #package_manager: yarn # optional, default is npm
+        with:
+          package_manager: yarn # optional, default is npm
           # Desired name for the Deployment environment. It is also the exposed artifact name which contains the build output (dist).
           
