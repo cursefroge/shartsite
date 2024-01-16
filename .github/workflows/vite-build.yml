@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy to Pages
 
 # Controls when the workflow will run
 on:
@@ -22,15 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Vite Github Pages Deployer
+        uses: skywarth/vite-github-pages-deployer@v1.3.0
+        with:
+          package_manager: yarn # optional, default is npm
+          # Desired name for the Deployment environment. It is also the exposed artifact name which contains the build output (dist).
+          
