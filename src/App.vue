@@ -1,9 +1,11 @@
 <script setup>
-  import Navbar from './components/Navbar.vue';
+  import { RouterView } from 'vue-router';
+import Navbar from './components/Navbar.vue';
   import ShartInvaders from './components/ShartInvaders.vue';
 </script>
 
 <template>
+  <RouterView />
   <Navbar />
   <div class="h-screen w-screen text-slate-400 bg-black font-bold text-center">
     <h1 class="font-rubik-burned text-5xl underline"><a href="https://www.youtube.com/channel/UCzz5HrKS70kYjSmuA4Lgezg"> far plasye yt</a></h1>
